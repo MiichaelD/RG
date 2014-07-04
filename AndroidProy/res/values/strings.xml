@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+--><resources>
+    <string name="app_name">RealGaming</string>
+    <!--  Bluetooth -->
+    <string name="send">Send</string>
+    <string name="illegaldevice">Illegal Device Name</string>
+    <string name="exit">Exit</string>
+    <string name="not_connected">You are not connected to a network</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled.</string>
+    <string name="title_connecting">connecting...</string>
+    <string name="title_connected_to">connected: </string>
+    <string name="title_connected">connected</string>
+    <string name="title_not_connected">not connected</string>
+    <!--  DeviceListActivity -->
+    <string name="scanning">Scanning for devices...</string>
+    <string name="select_device">Select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+    <!-- Options Menu -->
+    <string name="connect">Connect a device</string>
+    <string name="discoverable">Make discoverable</string>
+    <string name="options">Options</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="changeValues">Configuration</string>
+    <string name="confUpdated">Configurations updated successfully</string>
+    <!-- Screen Slide -->
+    <string name="title_screen_slide">Fragment Slide</string>
+    <!-- General -->
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="kill">Kill</string>
+    <string name="suicide">Suicide</string>
+    <string name="shoot">Shoot</string>
+    <string name="reload">Reload</string>
+    <string name="got_shot">Got shot by:</string>
+    <string name="user_id">User ID</string>
+    <string name="increase_xp">Increase XP by:</string>
+    <string name="event_simulator">Event Simulator</string>
+    <string name="amount">Amount</string>
+    <string name="please_input">Please introduce your </string>
+    <string name="game_monitor">Game Monitor</string>
+    <string name="logout">Logout</string>
+    <string name="server_down">Server connection refused</string>
+    <string name="server_address">Server\'s Address</string>
+    <string name="login_success">Logged in successfully</string>
+    <string name="defaults">Defaults</string>
+    <string name="life">Life</string>
+    <string name="ammo">Ammo</string>
+    <string name="rank">Rank</string>
+    <string name="kills">Kills: </string>
+    <string name="deaths">Deaths: </string>
+    <string name="ratio">Ratio: </string>
+    <string name="score">Score: </string>
+</resources>
