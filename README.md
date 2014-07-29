@@ -1,4 +1,1 @@
-RG
-==
-
-RealGaming? BattleShock? LazerGun? ... name still pending. But coding has just started. - This project borns from the idea of a new, fresher and more realistic gaming experience
+This project was about adding interfaces to the lazertag hardware, so we could handle the information of the gameplay. We had the guns and other equipment with Arduino and bluetooth modules to track all the info like shots received and sent, so we could handle this info in the Android app and show with a friendly interface our statistics and also our teams'. once processed we send this info to a web server to store it and later the users could see their performance online seamlessly.
