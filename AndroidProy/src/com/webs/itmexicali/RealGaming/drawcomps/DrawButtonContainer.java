@@ -24,9 +24,9 @@ public class DrawButtonContainer {
 	/**Create a new DrawButtonContainer
 	 * @param num_buttons amount of buttons to be handled	 */
 	public DrawButtonContainer(int num_buttons){
+		this.num_buttons = num_buttons;
 		buttons = new DrawButton[num_buttons];
 		point_button_rel = new byte[MAX_TOUCH_POINTERS];
-		this.num_buttons = num_buttons;
 	}
 	
 	/** Initialize the DrawButton specified by it's index
@@ -46,12 +46,7 @@ public class DrawButtonContainer {
 		if(index < num_buttons && index >= 0)
 			return buttons[index];
 		return null;
-	}
-	
-	public int getPressedButtons(){
-		return 0;
-	}
-	
+	}	
 	
 	/** Bound an {@link DrawButton.ActionListener} listener to a {@link DrawButton}
 	 * @param index button index
@@ -105,5 +100,14 @@ public class DrawButtonContainer {
 	/** Get the number of buttons that this container has*/
 	public int getButtonsCount(){
 		return num_buttons;
+	}
+	
+	/** Return the number of buttons being pressed*/
+	public int getPressedButtons(){
+		int i;
+		for(i = 0 ; i < num_buttons; i++)
+			if(buttons[i].isPressed())
+				i++;
+		return i;
 	}
 }

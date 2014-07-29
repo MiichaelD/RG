@@ -5,9 +5,7 @@ import org.json.JSONObject;
 
 import com.webs.itmexicali.RealGaming.R;
 import com.webs.itmexicali.RealGaming.comm.MessageManager;
-import com.webs.itmexicali.RealGaming.comm.MessageManager.Events;
 import com.webs.itmexicali.RealGaming.users.Player;
-import com.webs.itmexicali.RealGaming.users.Team;
 
 import android.accounts.Account;
 import android.accounts.AccountAuthenticatorActivity;

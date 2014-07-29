@@ -40,6 +40,7 @@ public class PadView extends SurfaceView implements Callback, InfoUpdateListener
 		sh.addCallback(this);
 		
 		dbc = new DrawButtonContainer(numberOfButtons);
+		
 	}
 
 	
@@ -147,7 +148,7 @@ public class PadView extends SurfaceView implements Callback, InfoUpdateListener
 	@Override
 	public void surfaceCreated(SurfaceHolder holder) {
 		
-
+		
 	}
 
 	@Override
@@ -161,6 +162,10 @@ public class PadView extends SurfaceView implements Callback, InfoUpdateListener
 		
 		
 		dbc.initDrawButton(0, 15.0f*w, 1.75f*h, 45.0f*w, 10.0f*h);
+		dbc.initDrawButton(1, 5.0f*w, 30f*h, 26.0f*w, 36.5f*h);
+		dbc.initDrawButton(2, 34.0f*w, 30f*h, 55.0f*w, 36.5f*h);
+		
+		//register an action to button 0:
 		dbc.setOnActionListener(0, DrawButtonContainer.RELEASE_EVENT, new DrawButton.ActionListener(){
 			@Override
 			public void onActionPerformed() {
@@ -168,7 +173,6 @@ public class PadView extends SurfaceView implements Callback, InfoUpdateListener
 			}
 		});
 		
-		dbc.initDrawButton(1, 5.0f*w, 30f*h, 26.0f*w, 36.5f*h);
 		dbc.setOnActionListener(1, DrawButtonContainer.RELEASE_EVENT, new DrawButton.ActionListener(){
 			@Override
 			public void onActionPerformed() {
@@ -176,7 +180,6 @@ public class PadView extends SurfaceView implements Callback, InfoUpdateListener
 			}
 		});
 		
-		dbc.initDrawButton(2, 34.0f*w, 30f*h, 55.0f*w, 36.5f*h);
 		dbc.setOnActionListener(2, DrawButtonContainer.RELEASE_EVENT, new DrawButton.ActionListener(){
 			@Override
 			public void onActionPerformed() {
