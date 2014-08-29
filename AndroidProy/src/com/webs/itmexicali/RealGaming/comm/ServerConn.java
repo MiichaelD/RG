@@ -44,6 +44,7 @@ public class ServerConn{
 			System.out.println("Server's GET response: " +getResponse(Connect(metGET,url,query)));
 			System.out.println("Server's POST response: "+getResponse(Connect(metPOST,url,query)));
 		}catch (Exception e){			System.out.println(e.getMessage());	}
+		finally{in.close();}
 
 	}
 
