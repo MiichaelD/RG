@@ -2,6 +2,7 @@
 ## SVN & Personal Ignored folders
 #################
 
+builds/
 .svn/
 java/
 
