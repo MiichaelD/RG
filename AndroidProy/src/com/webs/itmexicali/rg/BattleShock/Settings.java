@@ -29,7 +29,6 @@ public class Settings {
 	
 	private String SRVaddress = defaultSRVAddress;
 	
-	
 	private SharedPreferences prefs;// To save preferences accesible by other Apps, just 
     private SharedPreferences.Editor prefsEditor;
 	
