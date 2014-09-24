@@ -25,7 +25,7 @@ public class Settings {
     		PLAYER_JSON = "playerJSON", TEAM_JSON = "teamJSON";
     
     //Server's address Cons
-	private static final String regEvent="/realgaming/battleshock/reg_event.php", defaultSRVAddress = "http://pcmxl.com";
+	private static final String regEvent="/public/rg/battleshock/reg_event.php", defaultSRVAddress = "http://myhotspotz.net";
 	
 	private String SRVaddress = defaultSRVAddress;
 	
