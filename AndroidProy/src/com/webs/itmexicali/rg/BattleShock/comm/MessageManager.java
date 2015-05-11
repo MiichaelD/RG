@@ -238,16 +238,16 @@ public class MessageManager {
 	 * @return false if there is no network available
 	 */
 	public boolean mInternetSend(final String query, final String event) {
-		if( !ServerConn.isNetworkAvailable() )
+		if( !ServerConn.shared().isNetworkAvailable() )
 			return false;
 				
 		new Thread(new Runnable() {
 			public void run() {
 				try {
 					// Connect To Server
-					HttpURLConnection con = ServerConn.Connect(ServerConn.metGET, Settings.getIns(null).getRegEventAdd(), query);
+					HttpURLConnection con = ServerConn.shared().openConnection(ServerConn.Method.GET, Settings.getIns(null).getRegEventAdd(), query);
 					// getResponse & process it
-					SRVreceived = ServerConn.getResponse(con);
+					SRVreceived = ServerConn.shared().getResponse(con);
 					mInternetReceived(SRVreceived,con.getResponseCode());
 				} catch (Exception e1) {
 					if (Main.D);
