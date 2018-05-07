@@ -62,20 +62,20 @@ public class TeamView extends BaseFragView {
 	/***************************************************************************/
    	@Override
 	protected void reloadByResize() {
-   		mRectFs = new RectF[2];
-   		mRectFs[0] = new RectF(2.0f*w,  2.0f*w, 30.0f*w, 35.0f*h );
-   		mRectFs[1] = new RectF(32.0f*w, 2.0f*w, 60.0f*w, 35.0f*h );
-   		
-   		mBitmaps = new Bitmap[2];
-		//this task must be on a separated thread because of it's lag while fetching the img from server
-				new Thread(new Runnable(){
-					@Override
-					public void run(){
-						mBitmaps[0]= BitmapLoader.resizeImage(Main.instance,Team.current().getLogo(),26*w,35*h-4*w);
-						mBitmaps[1]= BitmapLoader.resizeImage(Main.instance,R.drawable.realgamingh,26*w,35*h-4*w);
-						refreshUI();
-					}
-				}).start();
+ 		mRectFs = new RectF[2];
+ 		mRectFs[0] = new RectF(2.0f*w,  2.0f*w, 30.0f*w, 35.0f*h );
+ 		mRectFs[1] = new RectF(32.0f*w, 2.0f*w, 60.0f*w, 35.0f*h );
+ 		
+ 		mBitmaps = new Bitmap[2];
+		// This task must be on a separated thread because it takes time fetching the img from server
+		new Thread(new Runnable(){
+			@Override
+			public void run(){
+				mBitmaps[0]= BitmapLoader.resizeImage(Main.instance,Team.current().getLogo(),26*w,35*h-4*w);
+				mBitmaps[1]= BitmapLoader.resizeImage(Main.instance,R.drawable.realgamingh,26*w,35*h-4*w);
+				refreshUI();
+			}
+		}).start();
 	}
    	
    	
@@ -111,7 +111,7 @@ public class TeamView extends BaseFragView {
 		bgColor= Color.DKGRAY;
 	}
 
-    /** This is what is going to be shown on the canvas
+  /** This is what is going to be shown on the canvas
 	 * @see android.view.View#onDraw(android.graphics.Canvas) */
 	public void onDraw(Canvas canvas) {
 		try {
